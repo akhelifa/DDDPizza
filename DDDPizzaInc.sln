@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{08642963-38AF-4B52-AD96-02026460B260}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDPizzaInc.DomainModels", "DDDPizzaInc.DomainModels\DDDPizzaInc.DomainModels.csproj", "{909913EE-00DC-46B5-9999-8E7E04735AEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDPizzaInc.Interfaces", "DDDPizzaInc.Interfaces\DDDPizzaInc.Interfaces.csproj", "{D95B4500-6A05-43A2-A514-28001AFE3698}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{909913EE-00DC-46B5-9999-8E7E04735AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{909913EE-00DC-46B5-9999-8E7E04735AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{909913EE-00DC-46B5-9999-8E7E04735AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{909913EE-00DC-46B5-9999-8E7E04735AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D95B4500-6A05-43A2-A514-28001AFE3698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D95B4500-6A05-43A2-A514-28001AFE3698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D95B4500-6A05-43A2-A514-28001AFE3698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D95B4500-6A05-43A2-A514-28001AFE3698}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{909913EE-00DC-46B5-9999-8E7E04735AEE} = {08642963-38AF-4B52-AD96-02026460B260}
+		{D95B4500-6A05-43A2-A514-28001AFE3698} = {08642963-38AF-4B52-AD96-02026460B260}
+	EndGlobalSection
+EndGlobal
