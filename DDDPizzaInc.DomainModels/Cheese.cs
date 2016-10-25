@@ -9,13 +9,14 @@ namespace DDDPizzaInc.DomainModels
             : base(name)
         {
         }
-        public Cheese(string name, decimal price)
-            : base(name, price)
+        public Cheese(Guid id, string name)
+            : base(id, name)
         { }
 
-        public Cheese(Guid id, string name, decimal price)
-            : base(id, name, price)
-        { }
+        public override bool ShouldSerializePrice()
+        {
+            return false;
+        }
 
     }
 }
