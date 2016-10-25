@@ -1,0 +1,8 @@
+# build configuration, i.e. Debug, Release, etc.
+configuration: Release
+
+before_build:
+  - nuget restore
+  
+build:
+  verbosity: minimal
