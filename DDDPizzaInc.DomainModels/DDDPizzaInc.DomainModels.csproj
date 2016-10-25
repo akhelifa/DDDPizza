@@ -30,6 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Events, Version=3.5.2.27370, Culture=neutral, PublicKeyToken=9f9ffdb810b9e463, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Events.3.5.2.1\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\Autofac.Events.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,8 +47,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Bread.cs" />
+    <Compile Include="Cheese.cs" />
+    <Compile Include="BaseTypes\InventoryBase.cs" />
+    <Compile Include="Interfaces\IDomainEvent.cs" />
+    <Compile Include="Events\OrderNeedsDelivery.cs" />
+    <Compile Include="Handlers\NotifyOrderNeesdDelivery.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Pizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sauce.cs" />
+    <Compile Include="ServiceType.cs" />
+    <Compile Include="Size.cs" />
+    <Compile Include="Topping.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DDDPizzaInc.SharedKernel\DDDPizzaInc.SharedKernel.csproj">
+      <Project>{BCBA99A8-6E0C-4882-AECC-DAAA780C1060}</Project>
+      <Name>DDDPizzaInc.SharedKernel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

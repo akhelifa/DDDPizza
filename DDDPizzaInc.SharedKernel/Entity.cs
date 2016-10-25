@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DDDPizzaInc.DomainModels
+namespace DDDPizzaInc.SharedKernel
 {
-    public class Class1
+    public abstract class Entity
     {
+        public Guid Id { get; set; }
     }
 }
