@@ -2,7 +2,8 @@
 configuration: Release
 
 before_build:
-  - nuget restore
+  - nuget restore DDDPizzaInc.sln
   
 build:
   verbosity: minimal
+  project: DDDPizzaInc.sln
