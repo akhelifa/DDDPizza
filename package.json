@@ -1,0 +1,26 @@
+{
+  "name": "dddpizza",
+  "version": "1.0.0",
+  "description": "This is a DDD example walkthrough",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhelifa/DDDPizza.git"
+  },
+  "author": "Abdel Khelifa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akhelifa/DDDPizza/issues"
+  },
+  "homepage": "https://github.com/akhelifa/DDDPizza#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "graceful-fs": "^4.1.9",
+    "gulp": "^3.9.1",
+    "karma": "^1.3.0",
+    "minimatch": "^3.0.3"
+  }
+}

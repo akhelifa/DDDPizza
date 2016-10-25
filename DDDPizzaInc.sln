@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDPizzaInc.Interfaces", "D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{421808D6-B324-49D9-BAEC-A26534D7BCF9}"
 	ProjectSection(SolutionItems) = preProject
+		.bowerrc = .bowerrc
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		bower.json = bower.json
+		gulpfile.js = gulpfile.js
+		package.json = package.json
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -41,6 +47,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDpizzaInc.UnitTests", "DDDpizzaInc.UnitTests\DDDpizzaInc.UnitTests.csproj", "{4C235CA1-2EEB-41A7-BDEE-04F4DD71449E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDPizzaInc.Api", "DDDPizzaInc.Api\DDDPizzaInc.Api.csproj", "{8A264DC0-AF72-4169-8B73-9E28B91D5266}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6E294E80-102D-4FC9-9324-104A267DB0F9}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

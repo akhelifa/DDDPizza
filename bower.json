@@ -1,0 +1,36 @@
+{
+  "name": "dddpizza",
+  "description": "This is a DDD example walkthrough",
+  "main": "index.js",
+  "authors": [
+    "Abdel Khelifa"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/akhelifa/DDDPizza",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "angular-ui-router": "^0.3.1",
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "modernizr": "^3.3.1",
+    "respond": "^1.4.2",
+    "angular-animate": "^1.5.8",
+    "angular-bootstrap": "^2.2.0",
+    "angular-resource": "^1.5.8",
+    "angular-toastr": "^2.1.1",
+    "angular-mocks": "^1.5.8",
+    "angular-filter": "^0.5.11",
+    "sinon": "^1.17.6",
+    "bardjs": "^0.1.8",
+    "angular-cookies": "^1.5.8"
+  }
+}
