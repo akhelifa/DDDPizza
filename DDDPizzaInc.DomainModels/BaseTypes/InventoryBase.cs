@@ -21,8 +21,7 @@ namespace DDDPizzaInc.DomainModels.BaseTypes
         protected InventoryBase(string name, decimal price)
             : this(name)
         {
-            Name = name;
-            Id = Guid.NewGuid();
+            Price = price;
         }
 
         protected InventoryBase(Guid id, string name)

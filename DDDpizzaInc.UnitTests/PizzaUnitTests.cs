@@ -165,6 +165,7 @@ namespace DDDpizzaInc.UnitTests
         public void Should_Create_Instance_Of_Pizza_Calculate_Total()
         {
             // Arrange
+
             var toppingsCost = PizzaMocks.ToppingMocks().Sum(x => x.Price);
             var sizeCost = PizzaMocks.SizeMocks().First().Price;
             var expectedCost = toppingsCost + sizeCost;
