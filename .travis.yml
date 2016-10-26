@@ -1,6 +1,6 @@
 
 language: csharp
-solution: DDDPizza.sln
+solution: DDDPizzaInc.sln
 install:
   - nuget restore DDDPizzaInc.sln
  script:
