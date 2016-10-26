@@ -1,7 +1,7 @@
 language: csharp
 solution: DDDPizza.sln
 install:
-  - nuget restore DDDPizza.sln
+  - nuget restore DDDPizzaInc.sln
  script:
-  - xbuild /p:Configuration=Release DDDPizza.sln
-  - mono ./packages/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DDDPizza.UnitTests/bin/Release/DDDPizza.UnitTests.dll
+  - xbuild /p:Configuration=Release DDDPizzaInc.sln
+  - mono ./packages/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DDDPizzaInc.UnitTests/bin/Release/DDDPizzaInc.UnitTests.dll
