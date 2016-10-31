@@ -55,6 +55,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6E294E
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaSeeder", "PizzaSeeder\PizzaSeeder.csproj", "{18509B51-3CAB-4DFE-8206-EB9E734E2C96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,10 @@ Global
 		{8A264DC0-AF72-4169-8B73-9E28B91D5266}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A264DC0-AF72-4169-8B73-9E28B91D5266}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A264DC0-AF72-4169-8B73-9E28B91D5266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18509B51-3CAB-4DFE-8206-EB9E734E2C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18509B51-3CAB-4DFE-8206-EB9E734E2C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18509B51-3CAB-4DFE-8206-EB9E734E2C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18509B51-3CAB-4DFE-8206-EB9E734E2C96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

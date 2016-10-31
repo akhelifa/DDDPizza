@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Autofac.Events;
 using DDDPizzaInc.DomainModels;
 using DDDPizzaInc.DomainModels.Events;
+using DDDPizzaInc.DomainModels.Handlers;
+using DDDPizzaInc.DomainModels.Interfaces;
 using DDDPizzaInc.Mocks;
 using Moq;
 using NUnit.Framework;
@@ -16,11 +16,13 @@ namespace DDDpizzaInc.UnitTests
     public class PizzaUnitTests
     {
         private Mock<IEventPublisher> _mockEventPublisher;
+        private Mock<IMessageService> _mockMessageService;
 
         [SetUp]
         public void Setup()
         {
             _mockEventPublisher = new Mock<IEventPublisher>(MockBehavior.Strict);
+            _mockMessageService = new Mock<IMessageService>(MockBehavior.Strict);
         }
 
         #region " INVENTORY TESTS "
@@ -211,11 +213,15 @@ namespace DDDpizzaInc.UnitTests
         [Test]
         public void Should_Create_Instance_Of_Order_With_InRestaurant()
         {
+            // Arrange
             var pizza = new Pizza(PizzaMocks.ToppingMocks().ToList(), PizzaMocks.SizeMocks().First(), PizzaMocks.BreadMocks().ElementAt(1), PizzaMocks.GetSauces().ElementAt(1), PizzaMocks.GetCheese().ElementAt(2));
             var pizzas = new List<Pizza>() { pizza };
+            
+            // Act
             var sut = new Order(ServiceType.InRestaurant, pizzas, "Jose");
             sut.ProcessOrder(sut, _mockEventPublisher.Object);
 
+            // Assert
             _mockEventPublisher.VerifyAll();
             _mockEventPublisher.Verify(x => x.Publish(It.IsAny<IDomainEvent>()), Times.Never);
             Assert.IsInstanceOf<Order>(sut);
@@ -228,17 +234,41 @@ namespace DDDpizzaInc.UnitTests
         [Test]
         public void Should_Create_Instance_Of_Order_With_TakeOut()
         {
+            // Arrange
             var pizza = new Pizza(PizzaMocks.ToppingMocks().ToList(), PizzaMocks.SizeMocks().First(), PizzaMocks.BreadMocks().ElementAt(1), PizzaMocks.GetSauces().ElementAt(1), PizzaMocks.GetCheese().ElementAt(2));
             var pizzas = new List<Pizza>() { pizza };
+
+            // Act
             var sut = new Order(ServiceType.TakeOut, pizzas, "Jose");
             sut.ProcessOrder(sut, _mockEventPublisher.Object);
 
+            // Assert
             _mockEventPublisher.VerifyAll();
             _mockEventPublisher.Verify(x => x.Publish(It.IsAny<IDomainEvent>()), Times.Never);
             Assert.IsInstanceOf<Order>(sut);
             Assert.AreEqual(sut.ServiceCharge, 0);
             Assert.Greater(sut.SubTotal, 0);
             Assert.AreEqual(sut.ServiceCharge + sut.SubTotal, sut.TotalAmount);
+        }
+
+        [Test]
+        public void Should_Create_Instance_Of_NotifyOrderNeedsDelivery()
+        {
+            //Arrange
+            _mockMessageService.Setup(x => x.NotifyDelivery(It.IsAny<Order>())).Verifiable();
+            var pizza = new Pizza(PizzaMocks.ToppingMocks().ToList(), PizzaMocks.SizeMocks().First(), PizzaMocks.BreadMocks().ElementAt(1), PizzaMocks.GetSauces().ElementAt(1), PizzaMocks.GetCheese().ElementAt(2));
+            var pizzas = new List<Pizza>() { pizza };
+            var order = new Order(ServiceType.TakeOut, pizzas, "Jose");
+
+            //Act
+            var sut = new NotifyOrderNeedsDelivery(_mockMessageService.Object);
+            sut.Handle(new OrderNeedsDelivery(order));
+
+            //Assert
+            _mockMessageService.VerifyAll();
+            _mockMessageService.Verify(x => x.NotifyDelivery(It.IsAny<Order>()), Times.Once);
+            Assert.Pass();
+
         }
 
     }

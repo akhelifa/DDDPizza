@@ -32,5 +32,11 @@
     "sinon": "^1.17.6",
     "bardjs": "^0.1.8",
     "angular-cookies": "^1.5.8"
+  },
+  "resolutions": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "toastr": "^2.1.3"
   }
 }

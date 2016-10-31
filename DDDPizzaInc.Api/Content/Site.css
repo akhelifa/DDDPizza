@@ -15,3 +15,121 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/************************OVERRIDES****************************/
+
+table {
+    background-color: #fff;
+}
+
+    table > thead {
+        font-weight: bold;
+    }
+
+    table#viewOrders > thead {
+        background-color: #E4E4E4;
+    }
+
+    table#order > thead {
+        background-color: #511c39;
+        color: #fff;
+    }
+
+.navbar-nav > li > a {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/*********************************************************************/
+
+.active-link {
+    background-color: #994271;
+}
+
+.site-title {
+    font-family: 'Trade Winds', cursive;
+    color: #fff;
+    font-size: 28px;
+    vertical-align: bottom;
+    text-shadow: 0px 1px 2px rgba(45, 3, 3, 1);
+}
+
+.site-title-2 {
+    font-family: 'Trade Winds', cursive;
+    color: #FFF0CA;
+    font-size: 28px;
+    vertical-align: bottom;
+    text-shadow: 0px 1px 2px rgba(45, 3, 3, 1);
+}
+
+.toppings-btns {
+    padding: 3px;
+    margin-left: 10px;
+}
+
+.price {
+    padding: 3px;
+    margin-left: 10px;
+    background-color: #F9D484;
+    border-radius: 5px;
+    border: solid 3px #FDC875;
+}
+
+.pizza-total {
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: #D8F3F7;
+    border-radius: 5px;
+    border: solid 3px #9DC7CD;
+}
+
+
+
+.orderBackground {
+    background-color: #E8D5E0;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.orderTotalsRow {
+    font-size: 20px;
+    color: #772953;
+}
+
+.icon-purple {
+    color: #772953;
+}
+
+.icon-orange {
+    color: #DF382C;
+}
+
+.icon-green {
+    color: #38B44A;
+}
+
+.work-spinner {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+ 
+}
+
+.work-spinner-img {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    margin: -28px 0 0 -25px;
+}
+
+.no-orders {
+    background-color: #747474;
+    border-color: #030303;
+    border: 10px solid #626262;
+    color: #FFFFFF;
+}

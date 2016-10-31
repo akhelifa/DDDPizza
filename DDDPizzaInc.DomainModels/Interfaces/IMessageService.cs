@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DDDPizzaInc.ViewModels
+namespace DDDPizzaInc.DomainModels.Interfaces
 {
-    public class Class1
+    public interface IMessageService
     {
+        void NotifyDelivery(Order order);
     }
 }

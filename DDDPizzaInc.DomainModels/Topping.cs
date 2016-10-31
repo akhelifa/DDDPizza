@@ -1,9 +1,10 @@
 using System;
 using DDDPizzaInc.DomainModels.BaseTypes;
+using DDDPizzaInc.DomainModels.Interfaces;
 
 namespace DDDPizzaInc.DomainModels
 {
-    public class Topping : InventoryBase
+    public class Topping : InventoryBase, IInventoryEntity
     {
         public Topping(string name, decimal price)
             : base(name, price)

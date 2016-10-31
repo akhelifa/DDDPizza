@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DDDPizzaInc.Infrastructure.MongoDb</RootNamespace>
     <AssemblyName>DDDPizzaInc.Infrastructure.MongoDb</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,7 +31,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.1.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.1.1\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.3.0.157, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.3.0\lib\net45\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.3.0.157, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.3.0\lib\net45\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.3.0.157, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.3.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,8 +57,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="InventoryRepository.cs" />
+    <Compile Include="OrderRepository.cs" />
+    <Compile Include="RepositoryFactory.cs" />
+    <Compile Include="SeedRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DDDPizzaInc.DomainModels\DDDPizzaInc.DomainModels.csproj">
+      <Project>{909913ee-00dc-46b5-9999-8e7e04735aee}</Project>
+      <Name>DDDPizzaInc.DomainModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDDPizzaInc.Infrastructure\DDDPizzaInc.Infrastructure.csproj">
+      <Project>{7c4c5458-4c87-43d3-a50c-427b38191b4c}</Project>
+      <Name>DDDPizzaInc.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDDPizzaInc.Interfaces\DDDPizzaInc.Interfaces.csproj">
+      <Project>{d95b4500-6a05-43a2-a514-28001afe3698}</Project>
+      <Name>DDDPizzaInc.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDDPizzaInc.SharedKernel\DDDPizzaInc.SharedKernel.csproj">
+      <Project>{bcba99a8-6e0c-4882-aecc-daaa780c1060}</Project>
+      <Name>DDDPizzaInc.SharedKernel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

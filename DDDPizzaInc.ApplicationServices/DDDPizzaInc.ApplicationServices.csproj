@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DDDPizzaInc.ApplicationServices</RootNamespace>
     <AssemblyName>DDDPizzaInc.ApplicationServices</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,8 +30,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Events, Version=3.5.2.27370, Culture=neutral, PublicKeyToken=9f9ffdb810b9e463, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Events.3.5.2.1\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\Autofac.Events.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=5.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,8 +54,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="IInventoryService.cs" />
+    <Compile Include="InventoryService.cs" />
+    <Compile Include="IOrderService.cs" />
+    <Compile Include="OrderService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DDDPizzaInc.DomainModels\DDDPizzaInc.DomainModels.csproj">
+      <Project>{909913ee-00dc-46b5-9999-8e7e04735aee}</Project>
+      <Name>DDDPizzaInc.DomainModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDDPizzaInc.Interfaces\DDDPizzaInc.Interfaces.csproj">
+      <Project>{d95b4500-6a05-43a2-a514-28001afe3698}</Project>
+      <Name>DDDPizzaInc.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDDPizzaInc.SharedKernel\DDDPizzaInc.SharedKernel.csproj">
+      <Project>{bcba99a8-6e0c-4882-aecc-daaa780c1060}</Project>
+      <Name>DDDPizzaInc.SharedKernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDDPizzaInc.ViewModels\DDDPizzaInc.ViewModels.csproj">
+      <Project>{379eefa4-c509-4909-b31c-8403470e25f7}</Project>
+      <Name>DDDPizzaInc.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DDDPizzaInc.Interfaces
 {
-    public class Class1
+    public interface IRepositoryFactory
     {
+        T GetRepository<T>() where T : IInventoryRepository;
     }
 }

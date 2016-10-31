@@ -1,9 +1,10 @@
 using System;
 using DDDPizzaInc.DomainModels.BaseTypes;
+using DDDPizzaInc.DomainModels.Interfaces;
 
 namespace DDDPizzaInc.DomainModels
 {
-    public class Sauce : InventoryBase
+    public class Sauce : InventoryBase, IInventoryEntity
     {
         public Sauce(string name)
             : base(name)

@@ -28,7 +28,18 @@ namespace DDDPizzaInc.DomainModels
         public decimal SubTotal { get; private set; }
         public decimal ServiceCharge { get; private set; }
         public decimal TotalAmount { get; private set; }
-        public DateTime EstimatedReadyTime { get; private set; } // 20 mins + active = 20, 24
+        public DateTime EstimatedReadyTime { get; private set; }
+
+        public ServiceType ServiceType1
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        } // 20 mins + active = 20, 24
 
         private void CalculateTotal()
         {
